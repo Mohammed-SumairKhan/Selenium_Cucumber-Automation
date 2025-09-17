@@ -8,6 +8,7 @@ public class PropertiesReader {
 	
 	public PropertiesReader() {
 		try {
+			properties = new Properties();
 			FileInputStream fi = new FileInputStream("D:\\eclipse-workspace\\Selenium_Cucumber\\src\\main\\resources\\config.properties");
 			properties.load(fi);
 		} catch(Exception e) {
@@ -24,6 +25,12 @@ public class PropertiesReader {
     }
 	
 	 public int getHardWait() {
+	        return Integer.parseInt(properties.getProperty("hardwait"));
+	    }
+	 public int getImplicitWait() {
+	        return Integer.parseInt(properties.getProperty("hardwait"));
+	    }
+	 public int getExplicitWait() {
 	        return Integer.parseInt(properties.getProperty("hardwait"));
 	    }
 }
