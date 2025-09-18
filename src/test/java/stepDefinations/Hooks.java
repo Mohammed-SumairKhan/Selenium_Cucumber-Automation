@@ -14,7 +14,6 @@ public class Hooks {
 	@Before
 	public void start() {
 		driver = BrowserHandler.getBrowser(pr.getBrowserName());
-		driver.get(pr.getUrl());
 	}
 	
 	@After

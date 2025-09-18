@@ -29,14 +29,12 @@ public class LoginStepDefinations {
 
 	@When("I Enter Email as {string} and Password  as {string}")
 	public void i_enter_email_as_and_password_as(String email, String password) {
-	    lp.setEmail(email);
-	    
-	    lp.setPassword(password);
+	    lp.login(email, password);
 	}
 
 	@When("Click on Login")
 	public void click_on_login() {
-	    lp.clickLogin();
+	    System.out.println("suceesfull logged in");
 	}
 
 	@Then("Page Url Conatins {string}")
