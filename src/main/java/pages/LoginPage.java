@@ -23,7 +23,7 @@ public class LoginPage {
 	// Locator for logout button
 	@FindBy(xpath = "//*[@class= 'logout-btn']")
 	WebElement logoutButton;
-
+	
 	/**
 	 * Constructor to initialize the LoginPage object. Initializes the web elements
 	 * using PageFactory.
@@ -47,5 +47,12 @@ public class LoginPage {
 		passwordInput.sendKeys(password);
 		loginButton.click();
 	}
-
+	
+	public void clickLogoutButton() {
+		try {
+		logoutButton.click();
+		} catch(Exception e) {
+			throw new RuntimeException("Cann't click Logout Button" + e);
+		}
+	}
 }
