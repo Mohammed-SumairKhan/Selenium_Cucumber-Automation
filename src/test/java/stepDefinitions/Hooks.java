@@ -1,4 +1,4 @@
-package stepDefinations;
+package stepDefinitions;
 
 import org.openqa.selenium.WebDriver;
 

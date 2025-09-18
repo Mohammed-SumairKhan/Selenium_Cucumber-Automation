@@ -1,11 +1,11 @@
-package stepDefinations;
+package stepDefinitions;
 
 import org.openqa.selenium.WebDriver;
 
 import io.cucumber.java.en.Given;
 import utility.PropertiesReader;
 
-public class BrowserStratDefinations {
+public class BrowserStratDefinitions {
 	WebDriver driver = Hooks.driver;
 	PropertiesReader propertiesReader = new PropertiesReader();
 	

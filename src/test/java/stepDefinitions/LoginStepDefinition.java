@@ -1,4 +1,4 @@
-package stepDefinations;
+package stepDefinitions;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -11,7 +11,7 @@ import pages.LoginPage;
 import utility.PropertiesReader;
 import utility.WaitUtils;
 
-public class LoginStepDefinations {
+public class LoginStepDefinition {
 	WebDriver driver;
 	PropertiesReader pr = new PropertiesReader();
 	LoginPage lp;

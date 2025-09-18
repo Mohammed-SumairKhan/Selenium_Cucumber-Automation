@@ -1,4 +1,4 @@
-package stepDefinations;
+package stepDefinitions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +13,7 @@ import pages.SearchPage;
 import utility.JsonReader;
 import utility.WaitUtils;
 
-public class SearchDefinations {
+public class SearchDefinitions {
 	WebDriver driver = Hooks.driver;
 	SearchPage searchPage;
 	LoginPage loginPage;
