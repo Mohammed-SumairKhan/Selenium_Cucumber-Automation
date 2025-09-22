@@ -1,22 +1,14 @@
 Feature: Login Feature
 
-  Scenario: Search Successful Login With Valid Credentials
-    Given I Lunch Chrome Browser
-    When I Opens URL
-    And I Enter Email as "admin" and Password  as "admin123"
-    And Click on Login
-    Then Page Url Conatins "dashboard"
-    And Close Browser
+Background:
+	Given I Open application
+	
+  Scenario: Login With Valid Credentials
+    Given I enter the email "admin" and password "admin123"
+    And I click on Login
+    Then Page URL contains "dashboard"
 
-    Scenario Outline:
-	Given I Lunch Chrome Browser
-    When I Opens URL
-    And I Enter Email as "<email>" and Password  as "<password>"
-    And Click on Login
-    Then Page Url Conatins "dashboard"
-    And Close Browser
-    
-    Examples:
-    |email   |   |password|  
-	|admin   |   |admin123|
-	|admin123|   |admin12 |
+  Scenario: Login Invalid Credentials
+    Given I enter Email as "admin" and Password as "admin1"
+    And I click on Login
+    Then Page URL contains "login"
