@@ -6,6 +6,7 @@ import driverproperties.BrowserHandler;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import utility.PropertiesReader;
+import utility.WaitUtils;
 
 public class Hooks {
 	public static WebDriver driver;
@@ -14,6 +15,7 @@ public class Hooks {
 	@Before
 	public void start() {
 		driver = BrowserHandler.getBrowser(pr.getBrowserName());
+		WaitUtils.implicitWait(driver);
 	}
 	
 	@After
