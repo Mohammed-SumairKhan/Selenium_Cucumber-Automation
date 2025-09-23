@@ -1,9 +1,8 @@
-@sanity
 Feature: Search with multiple input
 Background:
 Given I Open application
 
-@search
+
 Scenario Outline:Verify search functionality for multiple inputs
 
 Given 	I Login in the application 
@@ -17,3 +16,11 @@ Examples:
 		|Aadhar Changes|
 		|1234567890|
 		|TSK004|	   
+		
+
+Scenario: clear search button functionality
+
+Given I Login in the application
+And I have entered "rohon" in the search bar
+When I click the clear search button
+Then the search bar should be empty
