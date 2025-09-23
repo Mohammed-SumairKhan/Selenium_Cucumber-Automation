@@ -93,11 +93,25 @@ public class WaitUtils {
         // Create a WebDriverWait instance using explicit wait time from config.properties
         WebDriverWait wait = new WebDriverWait(driver, 
                 Duration.ofSeconds(propertiesReader.getExplicitWait())); 
-
+   
         // Wait until the element located by 'locator' is visible on the page, then return it
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
-
+    
+    /**
+     * check is the expected text is visible in the web element
+     * return true if it is located else return false
+     * @param driver
+     * @param element
+     * @param expectedText
+     * @return
+     */
+    public static boolean isTextPresent(WebDriver driver, WebElement element, String expectedText) {
+    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	    boolean isTextPresent = wait.until(ExpectedConditions.textToBePresentInElement(element, expectedText));
+	    return isTextPresent;
+    }
+    
 
 }
 
