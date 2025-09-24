@@ -9,7 +9,7 @@ public class BrowserStratDefinitions {
 	WebDriver driver = Hooks.driver;
 	PropertiesReader propertiesReader = new PropertiesReader();
 	
-	@Given("I Open application")
+	@Given("I open the application")
 	public void i_open_application() {
 		driver.get(propertiesReader.getUrl()); // open the url 
 	}

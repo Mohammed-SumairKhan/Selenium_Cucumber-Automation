@@ -1,7 +1,7 @@
 Feature: Widget Navigation
 
 Background:
-Given I Open application
+Given I open the application
 
 Scenario Outline: Verify that clicking each widget navigates to the correct webpage
   Given I log in to the application

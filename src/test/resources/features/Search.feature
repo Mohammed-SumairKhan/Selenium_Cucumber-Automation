@@ -1,6 +1,6 @@
 Feature: Search with multiple input
 Background:
-Given I Open application
+Given I open the application
 
 
 Scenario Outline:Verify search functionality for multiple inputs

@@ -1,7 +1,7 @@
 Feature: Logout functionality
 
 Background:
-Given I Open application
+Given I open the application
 
 Scenario: User successfully logs out
 
