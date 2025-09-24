@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import utility.WaitUtils;
 
 /**
  * This class represents the Navigation Menu Page in the application. It
@@ -49,8 +48,10 @@ public class NavigationMenuPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	
-
+	/**
+	 * Clicks the given navigation link
+	 * @param name Name of the navigation link
+	 */
 	public void click(String name) {
 		try {
 			switch (name.toLowerCase()) {
@@ -70,7 +71,6 @@ public class NavigationMenuPage {
 				addEmployee.click();
 				break;
 			case "add task":
-				WaitUtils.waitForElementClickable(driver, addTask);
 				addTask.click();
 				break;
 			default:
