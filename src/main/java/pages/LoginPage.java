@@ -24,6 +24,14 @@ public class LoginPage {
 	@FindBy(xpath = "//*[@class= 'logout-btn']")
 	WebElement logoutButton;
 	
+	// Locator for drop down
+	@FindBy(xpath = "//div[@class = 'user-dropdown']")
+	WebElement userDropDown;
+	
+	// Locator for logout link
+	@FindBy(xpath = "//button[@class='dropdown-item d-flex align-items-center']")
+	WebElement logoutLink;
+	
 	/**
 	 * Constructor to initialize the LoginPage object. Initializes the web elements
 	 * using PageFactory.
@@ -55,4 +63,21 @@ public class LoginPage {
 			throw new RuntimeException("Cann't click Logout Button" + e);
 		}
 	}
+	
+	public void clickDropDown() {
+		try {
+		userDropDown.click();
+		} catch(Exception e) {
+			throw new RuntimeException("Cann't click Logout Button" + e);
+		}
+	}
+	
+	public void clickLogoutLink() {
+		try {
+		logoutLink.click();
+		} catch(Exception e) {
+			throw new RuntimeException("Cann't click Logout Button" + e);
+		}
+	}
+	
 }
