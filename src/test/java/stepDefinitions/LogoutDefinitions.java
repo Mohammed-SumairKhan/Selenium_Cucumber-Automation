@@ -3,6 +3,7 @@ package stepDefinitions;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -26,8 +27,8 @@ public class LogoutDefinitions {
 	   loginPage.login(userName, password);
 	}
 
-	@When("I clicks the {string} button")
-	public void i_clicks_the_button(String string) {
+	@When("I click the Logout button")
+	public void i_clicks_the_button() {
 	    loginPage.clickLogoutButton(); // clicks the logout button
 	}
 
@@ -36,5 +37,17 @@ public class LogoutDefinitions {
 		WaitUtils.waitForUrlContains(driver, "login");
 	    Assert.assertTrue(driver.getCurrentUrl().contains("login"));
 	}
+	
+	@When("I click the admin drop down")
+	public void i_click_the_admin_drop_down() {
+	    loginPage.clickDropDown();
+	}
+
+	@And("I click Logout link")
+	public void i_clicks_link() {
+	  loginPage.clickLogoutLink();
+	}
+
+	
 
 }
