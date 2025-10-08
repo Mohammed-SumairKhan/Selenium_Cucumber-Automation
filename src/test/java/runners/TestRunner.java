@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 
 @CucumberOptions(
-		  features = "src/test/resources/features/NavigationMenu.feature",
+		  features = "src/test/resources/features/DirectDashboardAccess.feature",
 		  glue = {"stepDefinitions"},
 		  plugin = {"pretty", "html:target/cucumber-report.html"},
 		  monochrome = true
