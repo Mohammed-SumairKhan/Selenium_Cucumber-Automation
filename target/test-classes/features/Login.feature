@@ -1,7 +1,7 @@
 Feature: Login Feature
 
 Background:
-	Given I Open application
+	Given I open the application
 	
   Scenario: Login With Valid Credentials
     Given I enter the email "admin" and password "admin123"
